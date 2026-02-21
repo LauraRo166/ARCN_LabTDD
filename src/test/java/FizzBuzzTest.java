@@ -2,23 +2,126 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
+
     @Test
-    void testFizzBuzzReturnsNumber() {
-        assertEquals("1", FizzBuzz.fizzbuzz(1));
+    void testRetornaNumeroComoString() {
+        // Arrange
+        int numero = 1;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("1", resultado);
     }
 
     @Test
-    void testFizzBuzzMultiplo3() {
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(3));
+    void testRetornaFizzParaMultiploDe3() {
+        // Arrange
+        int numero = 3;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("Fizz", resultado);
     }
 
     @Test
-    void testFizzBuzzMultiplo5() {
-        assertEquals("Buzz", FizzBuzz.fizzbuzz(5));
+    void testRetornaBuzzParaMultiploDe5() {
+        // Arrange
+        int numero = 5;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("Buzz", resultado);
     }
 
     @Test
-    void testFizzBuzzMultiplo3y5() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzbuzz(15));
+    void testRetornaFizzBuzzParaMultiploDe3Y5() {
+        // Arrange
+        int numero = 15;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("FizzBuzz", resultado);
+    }
+
+    // --- Pruebas adicionales ---
+
+    @Test
+    void testRetornaFizzParaMultiploDe3NoObvio() {
+        // Arrange
+        int numero = 9;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("Fizz", resultado);
+    }
+
+    @Test
+    void testRetornaBuzzParaMultiploDe5NoObvio() {
+        // Arrange
+        int numero = 25;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("Buzz", resultado);
+    }
+
+    @Test
+    void testRetornaFizzBuzzParaMultiploDe3Y5NoObvio() {
+        // Arrange
+        int numero = 30;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("FizzBuzz", resultado);
+    }
+
+    @Test
+    void testRetornaNumeroParaValorNoMultiplo() {
+        // Arrange
+        int numero = 7;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("7", resultado);
+    }
+
+    @Test
+    void testRetornaFizzBuzzParaNumero45() {
+        // Arrange
+        int numero = 45;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("FizzBuzz", resultado);
+    }
+
+    @Test
+    void testRetornaNumeroParaUno() {
+        // Arrange
+        int numero = 1;
+
+        // Act
+        String resultado = FizzBuzz.fizzbuzz(numero);
+
+        // Assert
+        assertEquals("1", resultado);
     }
 }
