@@ -238,7 +238,7 @@ BUILD SUCCESS
 
 **Captura de pantalla de pruebas exitosas:**
 
-![Estado de Pruebas - Tests Exitosos](./docs/test-results.png)
+![Estado de Pruebas - Tests Exitosos](img/image.png)
 
 *Espacio reservado para captura de pantalla de los resultados de `mvn test`*
 
@@ -281,10 +281,51 @@ Después de ejecutar los tests, se generan reportes en:
 [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 s
 [INFO] BUILD SUCCESS
 ```
-![alt text](img/image.png)
 
+## � Pipelines CI/CD
 
-## 📚 Conceptos TDD Aplicados
+El proyecto incluye dos pipelines automatizados de GitHub Actions para garantizar la calidad del código:
+
+### 1️⃣ Pipeline CI/CD ([ci-cd.yml](.github/workflows/ci-cd.yml))
+
+Ejecuta en cada `push` o `pull request` a las ramas `main` y `develop`.
+
+**Pasos:**
+- ✅ **Checkout** del código fuente
+- ✅ **Configuración de Java 17** (Temurin)
+- ✅ **Compilación** con Maven (`mvn clean compile`)
+- ✅ **Ejecución de Pruebas** (`mvn test`)
+- ✅ **Publicación de Artefactos** - Sube los reportes de pruebas (v4)
+- ✅ **Generación de Reportes** - Crea reportes detallados en GitHub (test-reporter v1)
+- ✅ **Verificación de Cobertura** - Valida que todas las pruebas pasen
+
+**Artefactos Generados:**
+- Reportes de pruebas en `target/surefire-reports/`
+- Verificación visual en GitHub Checks
+
+### 2️⃣ Pipeline Análisis Estático ([code-quality.yml](.github/workflows/code-quality.yml))
+
+Ejecuta análisis de calidad del código en cada `push` o `pull request` a las ramas `main`.
+
+**Pasos:**
+- ✅ **Checkout** del código fuente
+- ✅ **Configuración de Java 17**
+- ✅ **Análisis Maven** (`mvn clean verify`) - Valida compilación y pruebas
+- ✅ **Generación de Reporte** - Confirma compilación y pruebas exitosas
+
+### 📊 Estado de los Pipelines
+
+Los pipelines se ejecutan automáticamente en:
+- 📍 Cada nuevo `push` a `main` o `develop`
+- 📍 Cada `pull request` a `main` o `develop`
+- 📍 Pueden ejecutarse manualmente desde la pestaña **Actions**
+
+Los resultados son visibles en:
+- ✅ GitHub Actions > Workflows
+- ✅ Checks en Pull Requests
+- ✅ Badges de estado en el repositorio
+
+## �📚 Conceptos TDD Aplicados
 
 1. **Red-Green-Refactor Cycle**:
    - 🔴 **Red**: Se escribieron pruebas que definen el comportamiento esperado
