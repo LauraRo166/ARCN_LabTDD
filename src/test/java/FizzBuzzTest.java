@@ -9,7 +9,7 @@ class FizzBuzzTest {
         int numero = 1;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("1", resultado);
@@ -21,7 +21,7 @@ class FizzBuzzTest {
         int numero = 3;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("Fizz", resultado);
@@ -33,7 +33,7 @@ class FizzBuzzTest {
         int numero = 5;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("Buzz", resultado);
@@ -45,7 +45,7 @@ class FizzBuzzTest {
         int numero = 15;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("FizzBuzz", resultado);
@@ -59,7 +59,7 @@ class FizzBuzzTest {
         int numero = 9;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("Fizz", resultado);
@@ -71,7 +71,7 @@ class FizzBuzzTest {
         int numero = 25;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("Buzz", resultado);
@@ -83,7 +83,7 @@ class FizzBuzzTest {
         int numero = 30;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("FizzBuzz", resultado);
@@ -95,7 +95,7 @@ class FizzBuzzTest {
         int numero = 7;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("7", resultado);
@@ -107,7 +107,7 @@ class FizzBuzzTest {
         int numero = 45;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("FizzBuzz", resultado);
@@ -119,7 +119,7 @@ class FizzBuzzTest {
         int numero = 1;
 
         // Act
-        String resultado = FizzBuzz.fizzbuzz(numero);
+        String resultado = FizzBuzz.fizzBuzz(numero);
 
         // Assert
         assertEquals("1", resultado);
